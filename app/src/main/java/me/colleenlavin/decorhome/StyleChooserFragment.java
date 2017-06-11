@@ -27,6 +27,9 @@ public class StyleChooserFragment extends Fragment implements CompoundButton.OnC
     private CheckBox checkBox3;
     private CheckBox checkBox4;
     private CheckBox checkBox5;
+    private CheckBox checkBox6;
+    private CheckBox checkBox7;
+    private CheckBox checkBox8;
     private Button goToProductsBtn;
 
     private int numberChecked = 0;
@@ -73,6 +76,12 @@ public class StyleChooserFragment extends Fragment implements CompoundButton.OnC
         checkBox4.setOnCheckedChangeListener(this);
         checkBox5 = (CheckBox) v.findViewById(R.id.checkBox5);
         checkBox5.setOnCheckedChangeListener(this);
+        checkBox6 = (CheckBox) v.findViewById(R.id.checkBox6);
+        checkBox6.setOnCheckedChangeListener(this);
+        checkBox7 = (CheckBox) v.findViewById(R.id.checkBox7);
+        checkBox7.setOnCheckedChangeListener(this);
+        checkBox8 = (CheckBox) v.findViewById(R.id.checkBox8);
+        checkBox8.setOnCheckedChangeListener(this);
         goToProductsBtn = (Button) v.findViewById(R.id.goToProducts);
         goToProductsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
