@@ -19,20 +19,20 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/background"
-       >
+        android:background="@color/background" >
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <ImageView
-                tools:src="@drawable/clocktable"
                 android:id="@+id/offer_image"
                 android:layout_width="400dp"
-                android:scaleType="centerCrop"
-                android:adjustViewBounds="true"
                 android:layout_height="400dp"
-                android:padding="20dp" />
+                android:adjustViewBounds="true"
+                android:padding="20dp"
+                android:scaleType="centerInside"
+                tools:src="@drawable/clocktable" />
             <!--<ImageView-->
                 <!--tools:src="@drawable/greycouch"-->
                 <!--android:id="@+id/offer_image2"-->
@@ -92,7 +92,7 @@
         <com.daprlabs.aaron.swipedeck.SwipeDeck
             android:id="@+id/swipe_deck"
             android:layout_width="match_parent"
-            android:layout_height="580dp"
+            android:layout_height="475dp"
             android:padding="50dp"
             swipedeck:card_spacing="15dp"
             swipedeck:max_visible="3"

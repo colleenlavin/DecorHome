@@ -8,6 +8,4 @@
     <string name="title_activity_color_scheme_chooser_actvity">Colorscheme Chooser</string>
     <string name="title_activity_showroom">Showroom Activity</string>
     <string name="title_activity_style_chooser">Style Chooser Activity</string>
-    <color name="background">#E5FCFC</color>
-    <color name="accent">#5CA4A9</color>
 </resources>
