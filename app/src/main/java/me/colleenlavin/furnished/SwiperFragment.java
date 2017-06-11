@@ -1,4 +1,4 @@
-package me.colleenlavin.decorhome;
+package me.colleenlavin.furnished;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -99,7 +99,7 @@ public class SwiperFragment extends Fragment {
                             .setTitle("Your room has been generated!");
                     builder.setNegativeButton("Show Room", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
-                            // User clicked OK button
+                            getActivity().startActivity(new Intent(SwiperFragment.this.getActivity(), ShowroomActivity.class));
                         }
                     });
                     builder.setPositiveButton("Swipe", new DialogInterface.OnClickListener() {

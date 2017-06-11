@@ -1,4 +1,4 @@
-package me.colleenlavin.decorhome;
+package me.colleenlavin.furnished;
 
 import android.content.Context;
 import android.util.Log;

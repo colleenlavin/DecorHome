@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="me.colleenlavin.decorhome">
+    package="me.colleenlavin.furnished">
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="me.colleenlavin.furnished.MainActivity"
             android:label="@string/app_name"
             android:launchMode="singleTop"
             android:theme="@style/AppTheme.NoActionBar">
@@ -23,45 +23,45 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SwiperActivity">
+        <activity android:name="me.colleenlavin.furnished.SwiperActivity">
             <!--<intent-filter>-->
                 <!--<action android:name="android.intent.action.MAIN" />-->
                 <!--<category android:name="android.intent.category.LAUNCHER" />-->
             <!--</intent-filter>-->
         </activity>
         <activity
-            android:name=".ColorSchemeChooserActvity"
+            android:name="me.colleenlavin.furnished.ColorSchemeChooserActvity"
             android:label="@string/title_activity_color_scheme_chooser_actvity"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName="me.colleenlavin.furnished.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="me.colleenlavin.decorhome.MainActivity" />
+                android:value="me.colleenlavin.furnished.MainActivity" />
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".ShowroomActivity"
+            android:name="me.colleenlavin.furnished.ShowroomActivity"
             android:label="@string/title_activity_showroom"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="me.colleenlavin.decorhome.MainActivity" />
+                android:value="me.colleenlavin.furnished.MainActivity" />
              <!--<intent-filter>-->
                  <!--<action android:name="android.intent.action.MAIN" />-->
                  <!--<category android:name="android.intent.category.LAUNCHER" />-->
              <!--</intent-filter>-->
         </activity>
         <activity
-            android:name=".StyleChooserActivity"
+            android:name="me.colleenlavin.furnished.StyleChooserActivity"
             android:label="@string/title_activity_style_chooser"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName="me.colleenlavin.furnished.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="me.colleenlavin.decorhome.MainActivity" />
+                android:value="me.colleenlavin.furnished.MainActivity" />
         </activity>
 
         <meta-data android:name="com.usebutton.applicationid" android:value="app-003a985d9927bc3f"/>

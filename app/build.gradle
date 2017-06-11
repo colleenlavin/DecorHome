@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "me.colleenlavin.decorhome"
+        applicationId "me.colleenlavin.furnished"
         minSdkVersion 20
         targetSdkVersion 25
         versionCode 1

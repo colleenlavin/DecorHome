@@ -10,7 +10,7 @@
     android:paddingEnd="8dp"
     android:paddingBottom="8dp"
     android:orientation="vertical"
-    tools:context="me.colleenlavin.decorhome.StyleChooserActivity"
+    tools:context="me.colleenlavin.furnished.StyleChooserActivity"
     tools:showIn="@layout/activity_style_chooser">
 
     <android.support.v7.widget.CardView

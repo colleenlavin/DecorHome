@@ -1,4 +1,4 @@
-package me.colleenlavin.decorhome;
+package me.colleenlavin.furnished;
 
 
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+
+import com.squareup.picasso.Picasso;
 
 
 /**
@@ -55,11 +57,12 @@ public class MainFragment extends Fragment {
         livingRoomBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                startActivity(new Intent(v.getContext(), ColorSchemeChooserActvity.class));
                 ((MainActivity)getActivity()).changeFragmentTo(ColorSchemeFragment.newInstance("Oi"));
             }
         });
+        Picasso.with(getActivity()).load(R.drawable.living_room).fit().centerInside().into(livingRoomBtn);
         ImageButton bathroom = (ImageButton) v.findViewById(R.id.img_bathroom);
+        Picasso.with(getActivity()).load(R.drawable.bath).fit().centerInside().into(bathroom);
         return v;
     }
 

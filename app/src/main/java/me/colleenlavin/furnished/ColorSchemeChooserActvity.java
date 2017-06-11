@@ -1,4 +1,4 @@
-package me.colleenlavin.decorhome;
+package me.colleenlavin.furnished;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -7,12 +7,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-public class StyleChooserActivity extends AppCompatActivity {
+public class ColorSchemeChooserActvity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_style_chooser);
+        setContentView(R.layout.activity_color_scheme_chooser_actvity);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -25,6 +25,7 @@ public class StyleChooserActivity extends AppCompatActivity {
             }
         });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 
 }

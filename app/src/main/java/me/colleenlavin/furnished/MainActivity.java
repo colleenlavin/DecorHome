@@ -1,4 +1,4 @@
-package me.colleenlavin.decorhome;
+package me.colleenlavin.furnished;
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;

@@ -1,4 +1,4 @@
-package me.colleenlavin.decorhome;
+package me.colleenlavin.furnished;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -40,7 +40,12 @@ public class ShowroomActivity extends AppCompatActivity {
                 SparkPostEmailUtil.sendEmail(ShowroomActivity.this,
                         SP_API_KEY,
                         "Your recent Furnished set!",
-                        "This is just a test",
+                        "Dear Taylor, " +
+                                "Hope you enjoyed picking out your room! We noticed there " +
+                                "were some items left in your cart and would like to offer you a " +
+                                "10% off coupon if you fill out this quick survey on your " +
+                                "experience!" +
+                                "- Your friends at Furnished",
                         new SparkPostSender("developer@aymlab.com", "Furnished LLC"),
                         new SparkPostRecipient("themastrgamr@gmail.com"),
                         new EmailListener() {
