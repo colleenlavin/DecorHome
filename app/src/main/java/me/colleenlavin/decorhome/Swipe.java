@@ -1,6 +1,8 @@
 package me.colleenlavin.decorhome;
 
+import android.content.DialogInterface;
 import android.graphics.drawable.Drawable;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -9,7 +11,7 @@ import com.daprlabs.aaron.swipedeck.SwipeDeck;
 import java.util.ArrayList;
 
 public class Swipe extends AppCompatActivity {
-
+    int counter =0;
     private SwipeDeck  cardStack;
     private SwipeDeckAdapter adapter;
     ArrayList<String> testData = new ArrayList<>();
@@ -18,7 +20,7 @@ public class Swipe extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_swipe);
         cardStack = (SwipeDeck) findViewById(R.id.swipe_deck);
-        ArrayList<Integer> swipeImages = new ArrayList<>();
+        final ArrayList<Integer> swipeImages = new ArrayList<>();
         swipeImages.add(R.drawable.bluecouch);
         swipeImages.add(R.drawable.krakentable);
         swipeImages.add(R.drawable.lamp);
@@ -47,14 +49,61 @@ public class Swipe extends AppCompatActivity {
             cardStack.setAdapter(adapter);
         }
         cardStack.setCallback(new SwipeDeck.SwipeDeckCallback() {
+
             @Override
             public void cardSwipedLeft(long stableId) {
+                if( counter < swipeImages.size()){
+                    counter++;
+                    System.out.println("counter" + counter);
+                }
+                else{
+                    AlertDialog.Builder builder = new AlertDialog.Builder(Swipe.this);
+                    System.out.println("counter" + counter);
+                    builder.setMessage("View your room or keep swiping to get more nuanced options")
+                            .setTitle("Your room has been generated!");
+                    builder.setNegativeButton("Show Room", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            // User clicked OK button
+                        }
+                    });
+                    builder.setPositiveButton("Swipe", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            // User clicked OK button
+                        }
+                    });
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
 
+                }
             }
 
             @Override
             public void cardSwipedRight(long stableId) {
+                counter++;
+                System.out.println("counter" + counter);
+                if( counter < swipeImages.size()){
 
+
+                }
+                else{
+                    System.out.println("counter" + counter);
+                    AlertDialog.Builder builder = new AlertDialog.Builder(Swipe.this);
+                    builder.setMessage("View your room or keep swiping to get more nuanced options")
+                            .setTitle("Your room has been generated!");
+                    builder.setNegativeButton("Show Room", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            // User clicked OK button
+                        }
+                    });
+                    builder.setPositiveButton("Swipe", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            // User clicked OK button
+                        }
+                    });
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
+
+                }
             }
         });
 //
