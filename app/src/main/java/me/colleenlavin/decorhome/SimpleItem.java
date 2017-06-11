@@ -15,6 +15,7 @@ import java.util.List;
  */
 
 public class SimpleItem extends AbstractItem<SimpleItem, SimpleItem.ViewHolder> {
+
     public String name;
 
     public SimpleItem withName(String name) {

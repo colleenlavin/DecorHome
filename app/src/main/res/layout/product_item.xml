@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:button="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/product_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <ImageView
+        android:id="@+id/product_img"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:adjustViewBounds="false"
+        android:scaleType="fitCenter" />
+
+    <FrameLayout
+        android:id="@+id/item_image_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient"
+        android:foreground="?selectableItemBackgroundBorderless"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/item_text_container"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_image_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-medium"
+                android:lines="1"
+                android:shadowColor="#AA000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/item_image_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:shadowColor="#AA000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="1"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/item_image_loved_container"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="bottom|right"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="24dp">
+
+            <com.mikepenz.iconics.view.IconicsImageView
+                android:id="@+id/item_image_loved_yes"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:elevation="2dp"
+                app:iiv_color="#FFFFFF"
+                app:iiv_icon="fa-heart" />
+
+            <com.mikepenz.iconics.view.IconicsImageView
+                android:id="@+id/item_image_loved_no"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:elevation="2dp"
+                app:iiv_color="#FFFFFF"
+                app:iiv_icon="fa-heart-o" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <com.usebutton.sdk.ButtonDropin
+        android:id="@+id/main_dropin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        button:btn_buttonId="btn-2124b55dffeb0dfa" />
+</FrameLayout>

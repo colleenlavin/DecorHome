@@ -10,11 +10,14 @@ import com.daprlabs.aaron.swipedeck.SwipeDeck;
 
 import java.util.ArrayList;
 
-public class Swipe extends AppCompatActivity {
+
+
+public class SwiperActivity extends AppCompatActivity {
     int counter =0;
     private SwipeDeck  cardStack;
     private SwipeDeckAdapter adapter;
     ArrayList<String> testData = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +32,6 @@ public class Swipe extends AppCompatActivity {
         swipeImages.add(R.drawable.swirltable);
         swipeImages.add(R.drawable.ornaterug);
         swipeImages.add(R.drawable.rug);
-
 
         ArrayList<String> testData = new ArrayList<>();
         testData.add("Nautical Table");
@@ -57,7 +59,7 @@ public class Swipe extends AppCompatActivity {
                     System.out.println("counter" + counter);
                 }
                 else{
-                    AlertDialog.Builder builder = new AlertDialog.Builder(Swipe.this);
+                    AlertDialog.Builder builder = new AlertDialog.Builder(SwiperActivity.this);
                     System.out.println("counter" + counter);
                     builder.setMessage("View your room or keep swiping to get more nuanced options")
                             .setTitle("Your room has been generated!");
@@ -87,7 +89,7 @@ public class Swipe extends AppCompatActivity {
                 }
                 else{
                     System.out.println("counter" + counter);
-                    AlertDialog.Builder builder = new AlertDialog.Builder(Swipe.this);
+                    AlertDialog.Builder builder = new AlertDialog.Builder(SwiperActivity.this);
                     builder.setMessage("View your room or keep swiping to get more nuanced options")
                             .setTitle("Your room has been generated!");
                     builder.setNegativeButton("Show Room", new DialogInterface.OnClickListener() {

@@ -20,7 +20,8 @@
             android:layout_width="125dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@mipmap/ic_launcher"
+            android:src="@drawable/bedroom"
+            android:scaleType="fitCenter"
             android:background="@null"
             tools:ignore="NestedWeights"
             android:contentDescription="Bedroom" />
@@ -29,7 +30,8 @@
             android:layout_width="125dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@mipmap/ic_launcher"
+            android:src="@drawable/bath"
+            android:scaleType="fitCenter"
             android:background="@null"
             android:contentDescription="Bathroom" />
     </LinearLayout>
@@ -43,7 +45,8 @@
             android:layout_width="125dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@mipmap/ic_launcher"
+            android:src="@drawable/kithen"
+            android:scaleType="fitCenter"
             android:background="@null"
             tools:ignore="NestedWeights"
             android:contentDescription="Kitchen" />
@@ -53,6 +56,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:src="@mipmap/ic_launcher"
+            android:scaleType="fitCenter"
             android:background="@null"
             android:contentDescription="Living Room" />
     </LinearLayout>

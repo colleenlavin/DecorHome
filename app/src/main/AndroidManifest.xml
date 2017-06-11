@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="me.colleenlavin.decorhome">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,12 +23,11 @@
                 <!--<category android:name="android.intent.category.LAUNCHER" />-->
             <!--</intent-filter>-->
         </activity>
-        <activity android:name=".Swipe">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name=".SwiperActivity">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
         </activity>
         <activity
             android:name=".ColorSchemeChooserActvity"
@@ -44,11 +46,13 @@
             android:name=".ShowroomActivity"
             android:label="@string/title_activity_showroom"
             android:theme="@style/AppTheme.NoActionBar">
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="me.colleenlavin.decorhome.MainActivity" />
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
         </activity>
         <activity
             android:name=".StyleChooserActivity"
@@ -59,6 +63,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="me.colleenlavin.decorhome.MainActivity" />
         </activity>
+
+        <meta-data android:name="com.usebutton.applicationid" android:value="app-003a985d9927bc3f"/>
     </application>
 
 </manifest>
