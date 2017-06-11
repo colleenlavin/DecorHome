@@ -1,26 +1,23 @@
 package me.colleenlavin.decorhome;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
+import android.support.v7.app.AppCompatActivity;
 
 import com.daprlabs.aaron.swipedeck.SwipeDeck;
 
 import java.util.ArrayList;
 
-public class Swipe extends AppCompatActivity {
+public class SwiperActivity extends AppCompatActivity {
 
     private SwipeDeck  cardStack;
     private SwipeDeckAdapter adapter;
     ArrayList<String> testData = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_swipe);
         cardStack = (SwipeDeck) findViewById(R.id.swipe_deck);
-
 
         testData.add("Nautical Table");
         testData.add("1");

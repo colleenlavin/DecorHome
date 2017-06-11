@@ -66,11 +66,22 @@ public class ColorSchemeFragment extends Fragment implements CompoundButton.OnCh
         View v = inflater.inflate(R.layout.fragment_color_scheme, container, false);
 
         checkBox1 = (CheckBox) v.findViewById(R.id.checkBox);
+        checkBox1.setOnCheckedChangeListener(this);
         checkBox2 = (CheckBox) v.findViewById(R.id.checkBox2);
+        checkBox2.setOnCheckedChangeListener(this);
         checkBox3 = (CheckBox) v.findViewById(R.id.checkBox3);
+        checkBox3.setOnCheckedChangeListener(this);
         checkBox4 = (CheckBox) v.findViewById(R.id.checkBox4);
+        checkBox4.setOnCheckedChangeListener(this);
         checkBox5 = (CheckBox) v.findViewById(R.id.checkBox5);
+        checkBox5.setOnCheckedChangeListener(this);
         goToStylesBtn = (Button) v.findViewById(R.id.goToStyles);
+        goToStylesBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((MainActivity)getActivity()).changeFragmentTo(StyleChooserFragment.newInstance("Oi"));
+            }
+        });
 
         return v;
     }
