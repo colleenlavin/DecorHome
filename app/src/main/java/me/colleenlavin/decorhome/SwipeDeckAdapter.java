@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -19,11 +20,11 @@ import java.util.List;
 
 public class SwipeDeckAdapter extends BaseAdapter {
 
-    private List<String> data;
+    private List<Integer> data;
     private Context context;
 
 
-    public SwipeDeckAdapter(List<String> data, Context context) {
+    public SwipeDeckAdapter(List<Integer> data, Context context) {
         this.data = data;
         this.context = context;
     }
@@ -54,16 +55,17 @@ public class SwipeDeckAdapter extends BaseAdapter {
         }
 
         ImageView imageView = (ImageView) v.findViewById(R.id.offer_image);
-        Picasso.with(context).load(R.drawable.clocktable).fit().centerCrop().into(imageView);
-        TextView textView = (TextView) v.findViewById(R.id.sample_text);
-        String item = (String)getItem(position);
-        textView.setText(item);
+        Picasso.with(context).load(data.get(position)).fit().centerCrop().into(imageView);
+//        TextView textView = (TextView) v.findViewById(R.id.sample_text);
+//        String item = (String)getItem(position);
+//        textView.setText(item);
 
         v.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.i("Layer type: ", Integer.toString(v.getLayerType()));
                 Log.i("Hardware Accel type:", Integer.toString(View.LAYER_TYPE_HARDWARE));
+
             }
         });
         return v;

@@ -1,10 +1,8 @@
 package me.colleenlavin.decorhome;
 
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
 
 import com.daprlabs.aaron.swipedeck.SwipeDeck;
 
@@ -20,15 +18,31 @@ public class Swipe extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_swipe);
         cardStack = (SwipeDeck) findViewById(R.id.swipe_deck);
+        ArrayList<Integer> swipeImages = new ArrayList<>();
+        swipeImages.add(R.drawable.bluecouch);
+        swipeImages.add(R.drawable.krakentable);
+        swipeImages.add(R.drawable.lamp);
+        swipeImages.add(R.drawable.leavescouch);
+        swipeImages.add(R.drawable.moderntable);
+        swipeImages.add(R.drawable.swirltable);
+        swipeImages.add(R.drawable.ornaterug);
+        swipeImages.add(R.drawable.rug);
 
 
+        ArrayList<String> testData = new ArrayList<>();
         testData.add("Nautical Table");
-        testData.add("1");
-        testData.add("2");
-        testData.add("3");
-        testData.add("4");
+        testData.add("Kraken Table");
+        testData.add("Modern Table");
+        testData.add("Fish Rug");
+        testData.add("Round Sea Rug");
+        testData.add("Royalty Rug");
+        testData.add("Cinderella Rug");
+        testData.add("Leaves Couch");
+        testData.add("Blue Couch");
+        testData.add("Gray Couch");
 
-        adapter = new SwipeDeckAdapter(testData, this);
+
+        adapter = new SwipeDeckAdapter(swipeImages, this);
         if(cardStack != null){
             cardStack.setAdapter(adapter);
         }

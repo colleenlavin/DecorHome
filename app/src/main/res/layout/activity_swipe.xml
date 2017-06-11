@@ -6,20 +6,35 @@
     android:layout_gravity="center"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
+    android:layout_margin="10dp"
     android:gravity="center_horizontal"
-    android:padding="25dp">
+    android:layout_marginTop="30dp"
+    android:layout_marginBottom="30dp"
+    android:paddingBottom="35dp"
+    app:cardCornerRadius="10dp"
+    >
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical" android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+       >
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
                 tools:src="@drawable/clocktable"
                 android:id="@+id/offer_image"
-                android:layout_width="match_parent"
+                android:layout_width="400dp"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:layout_height="400dp"
+                android:padding="20dp"/>
+            <ImageView
+                tools:src="@drawable/greycouch"
+                android:id="@+id/offer_image2"
+                android:layout_width="400dp"
                 android:scaleType="centerCrop"
                 android:adjustViewBounds="true"
                 android:layout_height="400dp" />
@@ -29,7 +44,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center">
+            android:gravity="center"
+            >
             <!--<ImageView-->
                 <!--android:layout_weight="1"-->
                 <!--android:id="@+id/left_image"-->
@@ -62,16 +78,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/swipeLayout"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
 
         <com.daprlabs.aaron.swipedeck.SwipeDeck
             android:id="@+id/swipe_deck"
             android:layout_width="match_parent"
             android:layout_height="580dp"
             android:padding="50dp"
-            swipedeck:max_visible="3"
             swipedeck:card_spacing="15dp"
-            swipedeck:swipe_enabled="true"/>
+            swipedeck:max_visible="3"
+            swipedeck:swipe_enabled="true" />
 
         <!--<Button-->
             <!--android:id="@+id/button"-->
