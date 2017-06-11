@@ -62,26 +62,19 @@ public class ShowroomActivity extends AppCompatActivity {
         });
 
         String[] urls = {
-                "https://ak1.ostkcdn.com/images/products/11414287/Christopher-Knight-Home-Dejon-Chevron-Fabric-Loveseat-8dc9ae4c-caff-419b-981f-80881d4504b6_600.jpg",
-                "https://images-na.ssl-images-amazon.com/images/I/71%2BXPZ46fRL._SL1500_.jpg",
-                "https://images-na.ssl-images-amazon.com/images/I/91e1LHLXwdL._SL1500_.jpg",
-                "https://images-na.ssl-images-amazon.com/images/I/61oPkpaZ%2BcL._SL1500_.jpg",
-                "https://images-na.ssl-images-amazon.com/images/I/B1VoYn1GrmS._SL1500_.jpg",
-                "https://images-na.ssl-images-amazon.com/images/I/A1DOAupb-DL._SL1500_.jpg",
-                "https://images-na.ssl-images-amazon.com/images/I/81Ssno0WAGL._SL1500_.jpg",
-                "https://images-na.ssl-images-amazon.com/images/I/81J-QzYfNYL._SL1024_.jpg",
-                "https://images-na.ssl-images-amazon.com/images/I/91-OVWs9J1L._SL1500_.jpg",
-                "https://images-na.ssl-images-amazon.com/images/I/51C7oosxV4L.jpg",
+                "https://jetimages.azureedge.net/md5/afebd88fe96575e204a939fdaaea853d.500",
+                "https://images-na.ssl-images-amazon.com/images/I/71icNQUKVJL._SL1500_.jpg",
+                "https://jetimages.azureedge.net/md5/e5c6d9ca0c79c713f2b0dadbe67b6ae1.500",
+                "https://images-na.ssl-images-amazon.com/images/I/81VT9i9zZhL._SL1500_.jpg",
                 "https://images-na.ssl-images-amazon.com/images/I/61XUivx0UqL._SL1100_.jpg",
-                "https://www.amazon.com/Best-Choice-Products-Leather-Convertible/dp/B00VQYBTNQ/ref=sr_1_23?s=home-garden&ie=UTF8&qid=1497142354&sr=1-23&keywords=couch",
-                "https://target.scene7.com/is/image/Target/52071004?wid=2000&qlt=70&fmt=pjpeg",
-                "https://images-na.ssl-images-amazon.com/images/I/A1ZdadlhsvL._SL1500_.jpg",
-                "https://images-na.ssl-images-amazon.com/images/I/61jvnU1AOHL._SL1001_.jpg"
+                "https://images-na.ssl-images-amazon.com/images/I/91e1LHLXwdL._SL1500_.jpg",
+                "https://jetimages.azureedge.net/md5/0a126dead135463dc853876c7fa212e1.500",
+                "https://images-na.ssl-images-amazon.com/images/I/A1ZdadlhsvL._SL1500_.jpg"
         };
 
         RecyclerView recView = (RecyclerView)findViewById(R.id.showroom_chooser_recview);
         ArrayList<ProductItem> items = new ArrayList<>();
-        for(int i = 0; i < 15; i++){
+        for(int i = 0; i < urls.length; i++) {
             items.add(new ProductItem().withName("Showroom Piece #" + i)
                             .withDescription("$" + i)
                             .withImgUrl(urls[i]));
