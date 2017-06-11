@@ -8,7 +8,8 @@
     android:paddingTop="?actionBarSize"
     android:orientation="vertical"
     android:weightSum="2"
-    tools:context="me.colleenlavin.decorhome.MainActivity" >
+    android:background="@android:color/white"
+    tools:context="me.colleenlavin.decorhome.MainFragment">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -55,4 +56,5 @@
             android:background="@null"
             android:contentDescription="Living Room" />
     </LinearLayout>
+
 </LinearLayout>
