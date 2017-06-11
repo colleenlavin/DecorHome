@@ -35,7 +35,6 @@ public class ShowroomActivity extends AppCompatActivity {
             }
         });
 
-
         RecyclerView recView = (RecyclerView)findViewById(R.id.showroom_chooser_recview);
         ArrayList<SimpleItem> items = new ArrayList<>();
         for(int i = 0; i < 50; i++){
