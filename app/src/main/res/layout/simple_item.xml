@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:button="http://schemas.android.com/apk/res-auto"
     android:id="@+id/simple_item"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -13,5 +14,12 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:text="TextView" />
+
+    <com.usebutton.sdk.ButtonDropin
+        android:id="@+id/main_dropin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/simple_text"
+        button:btn_buttonId="btn-2124b55dffeb0dfa" />
 
 </RelativeLayout>
